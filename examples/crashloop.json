@@ -1,0 +1,1 @@
+{"id":"INC-2026-11-13-001","last_exit_code":137,"last_terminated_reason":"OOMKilled","log_snippet":"java.lang.OutOfMemoryError: Java heap space","memory_limit_mi":512,"memory_usage_mi":511,"namespace":"prod","node_condition":"","probe_failing":"","restart_window_minutes":10,"restarts":12,"service":"checkout-api","status":"CrashLoopBackOff"}
