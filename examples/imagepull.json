@@ -1,0 +1,1 @@
+{"id":"INC-2026-11-13-003","last_exit_code":null,"last_terminated_reason":"","log_snippet":"Failed to pull image \"web-frontend:v2.4.1\": rpc error: code = NotFound","memory_limit_mi":null,"memory_usage_mi":null,"namespace":"prod","node_condition":"","probe_failing":"","restart_window_minutes":10,"restarts":0,"service":"web-frontend","status":"ImagePullBackOff"}
