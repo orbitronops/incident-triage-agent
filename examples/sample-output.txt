@@ -1,0 +1,20 @@
+Incident: checkout-api  ·  Severity: HIGH  ·  Confidence: 0.86
+Probable cause: OOMKilled — container exceeded its memory limit
+
+Signals:
+  - memory usage 511Mi / 512Mi limit
+  - last exit code 137 (OOMKilled)
+  - restarts=12 in 10m
+
+Recommended next steps (read-only first):
+  1. kubectl describe pod checkout-api-pod -n prod
+  2. kubectl logs checkout-api-pod -n prod --previous
+  3. kubectl top pod checkout-api-pod -n prod
+
+Human review:
+  - Confirm the memory limit in the Deployment / StatefulSet spec — do not raise it blindly.
+  - Check for a memory leak: compare usage over the last hour, not just the last minute.
+  - If usage grows steadily per request, escalate to the service owner with the graph; a limit raise only buys time.
+
+Human approval: REQUIRED — no action was executed.
+This agent is read-only by design. See docs/SECURITY.md.
